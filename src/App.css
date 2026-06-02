@@ -94,3 +94,14 @@ body {
     display: none !important;
   }
 }
+
+@media (min-width: 768px) {
+  .zones-content {
+    flex-direction: row !important;
+  }
+
+  .zones-content > div {
+    flex: 1;
+    width: auto !important;
+  }
+}
