@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-function Hero({ t }) {
+function Hero({ t, onMapOpen }) {
   const navigate = useNavigate();
 
   return (
@@ -87,12 +87,14 @@ function Hero({ t }) {
             }}
             >{t.hero.cta}</button>
 
-          <button style={{
-            padding: '14px 40px',
-            background: 'transparent', color: '#FFF8EC',
-            border: '1px solid rgba(255,248,236,0.4)',
-            fontSize: 13, letterSpacing: '0.15em',
-            textTransform: 'uppercase',
+          <button
+            onClick={onMapOpen}
+            style={{
+              padding: '14px 40px',
+              background: 'transparent', color: '#FFF8EC',
+              border: '1px solid rgba(255,248,236,0.4)',
+              fontSize: 13, letterSpacing: '0.15em',
+              textTransform: 'uppercase',
             cursor: 'pointer', fontFamily: 'Georgia, serif'
           }}>{t.hero.ctaOutline}</button>
         </div>
